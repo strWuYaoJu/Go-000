@@ -32,7 +32,7 @@ func (d dao) getUserMsg(id int64) (user User, err error) {
 }
 
 //queryUserInfo 模拟service层
-func queryUserInfo(id int64) (user User, error err) {
+func queryUserInfo(id int64) (user User, err error) {
 	d := newDbDao()
 	if user, err = d.getUserMsg(id); err != nil {
 		if errors.Is(err, sql.ErrNoRows) {
